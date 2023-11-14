@@ -6,6 +6,7 @@ using System;
 public class CharacterMovement1 : MonoBehaviour
 {
     [SerializeField] private float _speed;
+    public Animator animator;
     private Vector2 direction;
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -19,6 +20,9 @@ public class CharacterMovement1 : MonoBehaviour
     {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", direction.x);
+        animator.SetFloat("Vertical", direction.y);
+        animator.SetFloat("Speed", direction.sqrMagnitude);
     }
     void FixedUpdate()
     {
