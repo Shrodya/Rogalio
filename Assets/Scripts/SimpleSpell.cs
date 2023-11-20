@@ -8,16 +8,17 @@ public class SimpleSpell : MonoBehaviour
     public float minDamage;
     public float maxDamage;
     public float projectileForce;
-    
     void Update()
-    {
-        if(Input.GetMouseButtonDown(1))
+    {   
+        if(Input.GetMouseButtonDown(0))
         {
             GameObject spell = Instantiate(projectile,transform.position,Quaternion.identity);
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 myPosition = transform.position;
             Vector2 direction = (mousePosition - myPosition).normalized;
             spell.GetComponent<Rigidbody2D>().velocity = direction * projectileForce;
+            spell.GetComponent<ProjectileHit>().damage = Random.Range(minDamage,maxDamage);
         }
+
     }
 }

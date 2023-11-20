@@ -13,7 +13,7 @@ public class RecievingDamage : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void DeadDamage(float damage)
+    public void DealDamage(float damage)
     {
         health -=damage;
         CheckDeath();
