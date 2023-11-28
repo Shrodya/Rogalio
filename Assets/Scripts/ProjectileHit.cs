@@ -8,7 +8,7 @@ public class ProjectileHit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name != "Character" && collision.name != "Fireball(Clone)")
+        if(collision.name != "Character" && collision.tag !="Projectile")
         {
             if(collision.GetComponent<RecievingDamage>() != null)
             {
