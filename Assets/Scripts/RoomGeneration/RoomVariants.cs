@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class RoomVariants : MonoBehaviour
 {
-    public GameObject[] RoomWithWalls;
+    public GameObject[] CasualRooms;
     public GameObject[] RoomWithFountain;
     public GameObject[] RoomWithMage;
-    public GameObject[] EmptyRoom;
+    public GameObject[] FinalRoom;
+    public float counter=1;
 }

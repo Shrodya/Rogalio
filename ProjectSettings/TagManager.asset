@@ -8,6 +8,8 @@ TagManager:
   - Projectile
   - RoomPoint
   - Rooms
+  - Door
+  - Border
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - Camera
+  - 
   - 
   - 
   - 
@@ -45,12 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Camera
-    uniqueID: 1985528719
-    locked: 0
   - name: Room
     uniqueID: 3761120681
     locked: 0
   - name: Player
     uniqueID: 2386918515
+    locked: 0
+  - name: Camera
+    uniqueID: 1985528719
     locked: 0

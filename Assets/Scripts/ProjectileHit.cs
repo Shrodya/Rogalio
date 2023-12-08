@@ -1,4 +1,4 @@
-using System.Collections;
+   using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,10 @@ public class ProjectileHit : MonoBehaviour
             {
                 collision.GetComponent<RecievingDamage>().DealDamage(damage);
             }
-            Destroy(gameObject);
+        }
+        if (collision.tag == "Border" || collision.tag == "Enemy"  || collision.tag == "Door")
+        {
+         Destroy(gameObject);
         }
     }
 }

@@ -8,13 +8,16 @@ public class EnemySimpleProjectile : MonoBehaviour
 
    void OnTriggerEnter2D(Collider2D collision)
    {
-    if (collision.tag != "Enemy" && collision.tag !="Projectile")
-    {
-        if(collision.tag == "Player")
+        if (collision.tag != "Enemy" && collision.tag !="Projectile")
         {
-            PlayerStats.playerStats.DealDamage(damage);
+            if(collision.tag == "Player")
+            {
+                PlayerStats.playerStats.DealDamage(damage);
+            }
         }
-        Destroy(gameObject);
-    }
+        if (collision.tag == "Border" || collision.tag == "Player" || collision.tag == "Door")
+        {
+            Destroy(gameObject);
+        }
    }
 }
