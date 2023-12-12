@@ -3261,7 +3261,9 @@ MonoBehaviour:
   - {fileID: 1832969121906622683}
   - {fileID: 8245391363007504675}
   enemyTypes:
-  - {fileID: 1346991147884030407, guid: 55c885cd6ed96d64e93db93c89beb94e, type: 3}
+  - {fileID: 1346991147884030407, guid: 10c6dac834430a746b914d19877e8ac1, type: 3}
+  - {fileID: 1346991147884030407, guid: 5383eaa27f10dc8458314e4d99cd1894, type: 3}
+  - {fileID: 1346991147884030407, guid: 9fe18f4599cf72a46abb91bc7eb1a700, type: 3}
   enemySpawners:
   - {fileID: 4394062340797470221}
   - {fileID: 4028763960144404166}
