@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 195083050427498540}
   - component: {fileID: 1130645401558074764}
   - component: {fileID: 4344682016984539587}
+  - component: {fileID: -7342205541315403110}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1908048781
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 1274595901, guid: 0879400b8cf4c7c41a6b923633f33a7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -185,3 +186,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 1.5
   animator: {fileID: 1130645401558074764}
+--- !u!114 &-7342205541315403110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5271914721465657987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a632b6bdae95e7245abbe54c9d796436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2348009373620052018, guid: 5c6aae575439e4a4ea9a94faf78f0459, type: 3}
+  minDamage: 20
+  maxDamage: 30
+  manaCost: 10
+  projectileForce: 2
