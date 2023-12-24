@@ -1,6 +1,6 @@
 <h1 align="center">Сборка и установка проекта</h1>
 <ol>
-  <li>Скачайте архив с проектом или клонируйте репозиторий (git clone https://github.com/Shrodya/Rogalio)</li>
+  <li>Скачайте архив с проектом с github</li>
   <li>Откройте папку с проектом через Unity Hub</li>
   <li>В меню редактора Unity выберите пункт File->Build Settings</li>
   <li>В окне Scenes In Build выберите все имеющиеся пункты</li>
