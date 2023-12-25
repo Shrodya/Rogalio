@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerStats : MonoBehaviour
     public float maxMana;
     public float manaRegen;
 
+    public float cash;
+    public Text cashText;
+
+
     void Awake()
     {
         if(playerStats != null)
@@ -37,6 +42,8 @@ public class PlayerStats : MonoBehaviour
     {
         health = maxHealth;
         mana = maxMana;
+        cash = 0;
+        cashText.text = "0 Gold";
         SetHealthUI();
         SetManaUI();
         StartCoroutine(RegenrationOfMana());
@@ -66,6 +73,7 @@ public class PlayerStats : MonoBehaviour
         if (health <= 0)
         {
             Destroy(player);
+            SceneManager.LoadScene("Main Menu");
         }
     }
     float CalculateHealthPercentage()
@@ -109,5 +117,15 @@ public class PlayerStats : MonoBehaviour
         {
             mana = maxMana;
         }        
+    }
+    public void CashSpend(float cost)
+    {
+        cash -= cost;
+        cashText.text = cash.ToString() + " Gold";
+    }
+    public void CashAdd(float additionalCash)
+    {
+        cash += additionalCash;
+        cashText.text=cash.ToString() + " Gold";
     }
 }

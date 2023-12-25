@@ -7,6 +7,7 @@ public class MeleeEnemy : MonoBehaviour
     public Transform Character;
     public float speed;
     public float damageOnTouch;
+    private AddRoom room;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,8 @@ public class MeleeEnemy : MonoBehaviour
         if(other.tag == "Player")
         {
             PlayerStats.playerStats.DealDamage(damageOnTouch);
+            room.enemies.Remove(gameObject);
+            Destroy(gameObject);
         }
     }
 

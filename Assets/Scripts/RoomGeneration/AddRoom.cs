@@ -13,6 +13,7 @@ public class AddRoom : MonoBehaviour
     private RoomVariants variants;
     private bool spawned;
     private bool doorsDestroyed;
+    private int totalEnemies;
     private void Start()
     {
         variants = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomVariants>();
@@ -35,6 +36,7 @@ public class AddRoom : MonoBehaviour
                     enemies.Add(enemy);
                 }
             }
+            totalEnemies=enemies.Count;
             StartCoroutine(CheckEnemies());
         }
     }
@@ -42,6 +44,7 @@ public class AddRoom : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => enemies.Count == 0);
+        PlayerStats.playerStats.CashAdd(totalEnemies*4);
         DestroyDoors();
 
     } 

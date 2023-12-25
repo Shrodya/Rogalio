@@ -11,7 +11,7 @@ public class SimpleSpell : MonoBehaviour
     public float projectileForce;
     void Update()
     {   
-        if(Input.GetMouseButtonDown(0) && PlayerStats.playerStats.mana >= manaCost)
+        if(Input.GetMouseButtonDown(0) && PlayerStats.playerStats.mana >= manaCost && PauseMoment.isPaused==false && ShopScript.inShop == false)
         {
             PlayerStats.playerStats.ManaSpend(manaCost);
             GameObject spell = Instantiate(projectile,transform.position,Quaternion.identity);

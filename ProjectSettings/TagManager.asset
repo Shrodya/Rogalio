@@ -10,6 +10,8 @@ TagManager:
   - Rooms
   - Door
   - Border
+  - Shop
+  - Merchant
   layers:
   - Default
   - TransparentFX
@@ -52,6 +54,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2386918515
+    locked: 0
+  - name: UI
+    uniqueID: 616904115
     locked: 0
   - name: Camera
     uniqueID: 1985528719
